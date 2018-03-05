@@ -1,0 +1,98 @@
+.importText{
+	width: 520px;
+}
+.filter-wrap{
+    display:inline-block;
+    width: 100%;
+    height: 100%;
+    position:relative;
+}
+.Nothing{
+    height: 30px;
+    width: 100%;
+    line-height: 30px;
+    font-size: 14px;
+    text-align: center;
+    color:#999;
+    display:none;
+    cursor:pointer;
+}
+.filter-items {
+    position: absolute;
+    z-index: 100;
+    height:auto;
+    max-height: 350px;
+    border: 1px solid #e4e8e9;
+    box-sizing:border-box;
+    overflow-x: hidden;
+    display: none;
+    background-color: white;
+}
+.filter-items-bot{
+    left: 0;
+    top: 30px;
+}
+.filter-items-top{
+    left: 0;
+    bottom: 30px;
+}
+.filter-item {
+    text-indent: 8px;
+    height: 80px;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 30px;
+    font-size: 13px;
+    border-bottom: 1px solid #ccc;
+}
+.filter-item:first-child {
+    /*background-color: #f3f6f7;*/
+}
+.filter-item:hover {
+    cursor: pointer;
+    background-color: #f3f6f7;
+}
+
+
+.filter-input {
+	line-height: 30px;
+	box-sizing: border-box;
+    text-indent: 8px;
+    height: 30px;
+    width: 520px;
+}
+
+.fl{
+    float: left;
+}
+.teamManage{
+    width: 520px;
+}
+.hs-memberList{
+    border-radius: 2px;
+    padding: 15px 20px;
+    height: 50px;
+    text-align: center;
+    /*position: relative;*/
+    border: none;
+}
+.hs-memberList:hover{
+    /*background-color: #f3f6f7;*/
+}
+.hs-memberList:hover .hs-memberName{
+    color: #333;
+}
+
+.hs-memberList .hs-memberName,.hs-section{
+    padding: 0 20px;
+    line-height: 24px;
+    height: 24px;
+}
+.hs-memberList .hs-section{
+    color: #666;
+}
+.hs-memberList img{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+}

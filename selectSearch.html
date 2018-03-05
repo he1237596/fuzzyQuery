@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="reset.css"/>
+    <link rel="stylesheet" type="text/css" href="select.css"/>
+    <script src="jquery.min.js"></script>
+    <!--<script type="text/javascript" src="cookies.js"></script>
+    <script type="text/javascript" src="auth.js"></script>-->
+    <script type="text/javascript" src="fuzzySearch.js"></script>
+    <style>
+    	.importText{
+    		margin-bottom:  300px;
+    	}
+    </style>
+</head>
+<body>	
+	
+	        <div class="importText" data-setting='{"width":520,"height":30}'>
+                <input type="text" id="search" class="filter-input" placeholder="输入员工姓名 / 员工编号 查找">
+            </div>
+	        <div class="importText" data-setting='{"width":520,"height":30}'>
+                <input type="text" id="search1" class="filter-input" placeholder="输入员工姓名 / 员工编号 查找">
+            </div>
+	        <div class="importText" data-setting='{"width":520,"height":30}'>
+                <input type="text" id="search2" class="filter-input" placeholder="输入员工姓名 / 员工编号 查找">
+            </div>
+	        <div class="importText" data-setting='{"width":520,"height":30}'>
+                <input type="text" id="search3" class="filter-input" placeholder="输入员工姓名 / 员工编号 查找">
+            </div>	        <div class="importText" data-setting=''>
+                <input type="text" id="search4" class="filter-input" placeholder="输入员工姓名 / 员工编号 查找">
+            </div>	        <div class="importText" data-setting=''>
+                <input type="text" id="search5" class="filter-input" placeholder="输入员工姓名 / 员工编号 查找">
+            </div>	        <div class="importText" data-setting=''>
+                <input type="text" id="search6" class="filter-input" placeholder="输入员工姓名 / 员工编号 查找">
+            </div>	        <div class="importText" data-setting=''>
+                <input type="text" id="search7" class="filter-input" placeholder="输入员工姓名 / 员工编号 查找">
+            </div>	        <div class="importText" data-setting=''>
+                <input type="text" id="search8" class="filter-input" placeholder="输入员工姓名 / 员工编号 查找">
+            </div>
+<script type="text/javascript">
+	$(function(){
+
+//	var fuzzySearch1 = new fuzzySearch($(".filter_input").eq(0));
+//	var fuzzySearch1 = new fuzzySearch($(".filter_input").eq(0));
+//	var setting = {
+//		width:520,
+//		height:30
+//	}
+		function callback(data){
+			console.log(data);
+		};
+		//如果配置有静态数据则忽略url
+		var config = {
+			className: ".filter-input",//初始化搜索插件的类名
+			width:100,
+			height:50,
+			callback: callback,//自定义点击后的回调函数
+			method:"post",
+//			msg: [{name:"讲师001",section:"事业部A",type:"讲师",},{name:"助教002",section:"事业部B",type:"助教"},{name:"助教003",section:"事业部C",type:"助教"},{name:"助教004",section:"事业部D",type:"助教"},{name:"助教005",section:"宣传部A",type:"助教"},{name:"讲师006",section:"宣传部B",type:"讲师"},{name:"讲师007",section:"市场部A",type:"讲师"},{name:"讲师008",section:"市场部B",type:"讲师"},{name:"讲师009",section:"市场部C",type:"讲师"},{name:"助教010",section:"市场部F",type:"助教"}],
+			url:"http://112.124.3.146:8020/api/ut/list",
+			searchName:"userName"//搜索的字段名
+		}
+		fuzzySearch.init(config);
+
+})
+</script>
+</body>
+</html>
